@@ -93,3 +93,14 @@ export const MinPara = styled.p`
   text-align: center;
   color: #595959;
 `;
+
+
+export const Contents = styled(Content)`
+word-wrap: break-word;
+width: 560px;
+text-align: left;
+line-height: 1.5;
+@media only screen and (max-width: 1024px){
+width: auto;
+} 
+`

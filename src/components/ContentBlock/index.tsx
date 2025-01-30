@@ -14,6 +14,7 @@ import {
   MinPara,
   StyledRow,
   ButtonWrapper,
+  Contents
 } from "./styles";
 
 const ContentBlock = ({
@@ -52,13 +53,13 @@ const ContentBlock = ({
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <h6>{t(title)}</h6>
-              <Content>
+              <Contents>
   {Array.isArray(content)
     ? content.map((line, index) => (
         <p key={index}>{line}</p>
       ))
     : t(content)}
-</Content>
+</Contents>
               {direction === "right" ? (
                 <ButtonWrapper>
                   {typeof button === "object" &&
@@ -103,7 +104,7 @@ const ContentBlock = ({
                                 height="60px"
                               />
                               <MinTitle>{t(item.title)}</MinTitle>
-                              <MinPara>{t(item.content)}</MinPara>
+                              <MinPara >{t(item.content)}</MinPara>
                               
                             </Col>
                           );

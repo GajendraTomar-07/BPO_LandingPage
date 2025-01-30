@@ -168,3 +168,31 @@ export const LanguageSwitchContainer = styled("div")`
   justify-content: space-between;
   width: 85px;
 `;
+
+export const Paras = styled(Para)`
+   color: var(--black-3);
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  // border-bottom: 2px solid transparent;
+  // transition: border-bottom 0.3s ease-in-out;
+
+  &:hover {
+  width: 65px;
+    border-bottom: 1px solid black;
+  }
+`;
+
+export const Parass = styled(Para)`
+   color: var(--black-3);
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  // border-bottom: 2px solid transparent;
+  // transition: border-bottom 0.3s ease-in-out;
+
+  &:hover {
+  width: 75px;
+    border-bottom: 1px solid black;
+  }
+`;

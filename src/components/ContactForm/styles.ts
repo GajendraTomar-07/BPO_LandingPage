@@ -1,3 +1,4 @@
+import { Slide } from "react-awesome-reveal";
 import styled from "styled-components";
 
 export const ContactContainer = styled("div")`
@@ -34,3 +35,15 @@ export const ButtonContainer = styled("div")`
     padding-top: 0.75rem;
   }
 `;
+
+export const Slides = styled(Slide)`
+margin-top: -100px;
+word-wrap: break-word;
+width: 500px;
+text-align: left;
+line-height: 1.5;
+@media only screen and (max-width: 1024px){
+margin-top: 10px;
+width: auto;
+} 
+`

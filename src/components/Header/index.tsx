@@ -14,7 +14,7 @@ import {
   Outline,
   Span,
 } from "./styles";
-import SGRLogo from "../../Assets/SGRLogo.jpg"; // Correct path
+import SGRLogo from "../../Assets/SGRLogo.jpg";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
@@ -33,6 +33,9 @@ const Header = ({ t }: { t: TFunction }) => {
     };
     return (
       <>
+       <CustomNavLinkSmall onClick={() => scrollTo("our-services")}>
+          <Span>{t("Our Services")}</Span>
+        </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("about")}>
           <Span>{t("Vision")}</Span>
         </CustomNavLinkSmall>

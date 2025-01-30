@@ -8,7 +8,7 @@ import { Button } from "../../common/Button";
 import Block from "../Block"; // Import Block
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
+import { ContactContainer, FormGroup, Span, ButtonContainer, Slides } from "./styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
@@ -22,14 +22,14 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
     <ContactContainer id={id}>
       <Row justify="space-between" align="middle">
         <Col lg={12} md={11} sm={24} xs={24}>
-          <Slide direction="left" triggerOnce>
+          <Slides direction="left" triggerOnce>
             {/* Pass an image to the Block component */}
             <Block 
               title={title} 
               content={content} 
               imageSrc="/images/contact-image.jpg"
             />
-          </Slide>
+          </Slides>
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
           <Slide direction="right" triggerOnce>

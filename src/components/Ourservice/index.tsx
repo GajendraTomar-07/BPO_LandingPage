@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Card } from "antd";
+import { ContactProps } from "../ContactForm/types";
 
 const services = [
   {
@@ -42,13 +43,21 @@ const services = [
 
 const Services: React.FC = () => {
   return (
-    <div style={{ padding: "40px" }}>
-      <h2 style={{ textAlign: "center", marginBottom: "30px" }}>Our Services</h2>
+    <div id={"our-services"} style={{ padding: "40px" }}>
+      <h2 style={{ textAlign: "center", marginBottom: "30px" }}>
+        Our Services
+      </h2>
       <Row gutter={[16, 16]}>
         {services.map((service, index) => (
           <Col key={index} xs={24} sm={12} md={8} lg={6} xl={6}>
             <Card hoverable style={{ height: "100%", fontSize: "17px" }}>
-              <h3 style={{ fontSize: "20px",  textAlign: "center", marginBottom: "10px" }}>
+              <h3
+                style={{
+                  fontSize: "20px",
+                  textAlign: "center",
+                  marginBottom: "10px",
+                }}
+              >
                 {service.title}
               </h3>
               <ul style={{ paddingLeft: "20px", color: "black" }}>

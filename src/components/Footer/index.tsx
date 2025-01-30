@@ -3,7 +3,7 @@ import { withTranslation, TFunction } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
 
-import { FooterSection, Title, Para } from "./styles";
+import { FooterSection, Title, Para, Paras, Parass } from "./styles";
 
 const Footer = ({ t }: { t: TFunction }) => {
   return (
@@ -27,16 +27,36 @@ const Footer = ({ t }: { t: TFunction }) => {
                 letterSpacing: "2px",
               }}
             >
-              Let's Go Rack...
+              Let's Rackup with success...
             </Para>
           </Col>
 
-          {/* Information Section */}
+         
           <Col lg={7} md={7} sm={12} xs={24}>
             <Title style={{ color: "var(--black-3)", padding: "5px" }}>{t("Information")}</Title>
-            <Para style={{ color: "var(--black-3)", padding: "5px", fontSize:"18px" }}>{t("About Company")}</Para>
-            <Para style={{ color: "var(--black-3)", padding: "5px",fontSize:"18px" }}>{t("Contact")}</Para>
-            <Para style={{ color: "var(--black-3)", padding: "5px",fontSize:"18px" }}>{t("Careers")}</Para>
+            {/* <Para style={{ color: "var(--black-3)", padding: "5px", fontSize:"18px" }} >{t("About Company")}</Para> */}
+          
+            <Paras
+  onClick={() => {
+    const element = document.getElementById("about-company-section");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+>
+  {t("About")}
+</Paras>
+ 
+
+            <Parass  
+             onClick={() => { 
+              const element = document.getElementById("contact");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+             }}
+            >{t("Contact")}</Parass>
+            {/* <Para style={{ color: "var(--black-3)", padding: "5px",fontSize:"18px" }}>{t("Careers")}</Para> */}
           </Col>
 
           {/* Contact Section */}
@@ -54,7 +74,7 @@ const Footer = ({ t }: { t: TFunction }) => {
         <Row  style={{ marginTop: "15px",justifyContent:'center', textAlign: "center" }}>
           <Col xs={24}>
             <Para style={{ color: "var(--black-3)", fontSize: "20px", fontWeight: "bold" }}>
-              © 2025 | All rights reserved by Sri GoRack
+              © 2025 | All rights reserved by SriGoRack
             </Para>
           </Col>
         </Row>
