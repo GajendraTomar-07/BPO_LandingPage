@@ -5,7 +5,7 @@ import { ContactProps, ValidationTypeProps } from "./types";
 import { useForm } from "../../common/utils/useForm";
 import validate from "../../common/utils/validationRules";
 import { Button } from "../../common/Button";
-import Block from "../Block";
+import Block from "../Block"; // Import Block
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
@@ -23,7 +23,12 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
       <Row justify="space-between" align="middle">
         <Col lg={12} md={11} sm={24} xs={24}>
           <Slide direction="left" triggerOnce>
-            <Block title={title} content={content} />
+            {/* Pass an image to the Block component */}
+            <Block 
+              title={title} 
+              content={content} 
+              imageSrc="/images/contact-image.jpg"
+            />
           </Slide>
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
@@ -48,6 +53,26 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   onChange={handleChange}
                 />
                 <ValidationType type="email" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="company"
+                  placeholder="Your Company Name"
+                  value={values.company || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="company" />
+              </Col>
+              <Col span={24}>
+                <Input
+                  type="text"
+                  name="phone"
+                  placeholder="Your Phone Number"
+                  value={values.phone || ""}
+                  onChange={handleChange}
+                />
+                <ValidationType type="phone" />
               </Col>
               <Col span={24}>
                 <TextArea

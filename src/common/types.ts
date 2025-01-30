@@ -30,6 +30,8 @@ export interface InputProps {
   ) => void;
 }
 export interface validateProps {
+  phone: string;
+  company: string;
   name: string;
   message: string;
   email: string;

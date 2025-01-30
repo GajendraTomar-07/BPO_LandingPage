@@ -3,8 +3,10 @@ import IntroContent from "../../content/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
-import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
+import Ourservice from "../../components/Ourservice"; // Import Ourservice component
+import Team from "../../components/Team"; // Import the Team component
+import teamimage from "../../Assets/teamimage.jpg"; // Import image
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
@@ -21,7 +23,7 @@ const Home = () => {
         title={IntroContent.title}
         content={IntroContent.text}
         button={IntroContent.button}
-        icon="developer.svg"
+        icon={teamimage} // Corrected to use the imported image
         id="intro"
       />
       <MiddleBlock
@@ -33,7 +35,6 @@ const Home = () => {
         direction="left"
         title={AboutContent.title}
         content={AboutContent.text}
-        section={AboutContent.section}
         icon="graphs.svg"
         id="about"
       />
@@ -44,13 +45,14 @@ const Home = () => {
         icon="product-launch.svg"
         id="mission"
       />
-      <ContentBlock
-        direction="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon="waving.svg"
-        id="product"
-      />
+
+      {/* Our Services Section */}
+      <Ourservice />
+
+      {/* Team Section (Newly added) */}
+      <Team />
+
+      {/* Contact Section */}
       <Contact
         title={ContactContent.title}
         content={ContactContent.text}

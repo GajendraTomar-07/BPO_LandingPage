@@ -9,6 +9,7 @@ interface MiddleBlockProps {
   content: string;
   button: string;
   t: TFunction;
+
 }
 
 const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
