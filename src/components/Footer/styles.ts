@@ -174,34 +174,59 @@ export const Paras = styled(Para)`
   padding: 5px;
   font-size: 18px;
   cursor: pointer;
-  // border-bottom: 2px solid transparent;
-  // transition: border-bottom 0.3s ease-in-out;
-
-  &:hover {
-  width: 65px;
-    border-bottom: 1px solid black;
+  line-height: 1.2;
+  
+   &:hover,
+  &:active,
+  &:focus {
+   width: 65px;
+    border-bottom: 1px solid rgb(255, 130, 92);
+    color: rgb(255, 130, 92);
+     padding-bottom: 1px;  
+    margin-bottom: 2px; 
   }
 `;
+
+// export const Parass = styled(Para)`
+//    color: var(--black-3);
+//   padding: 5px;
+//   font-size: 18px;
+//   cursor: pointer;
+//   // border-bottom: 2px solid transparent;
+//   // transition: border-bottom 0.3s ease-in-out;
+
+//   &:hover {
+//   width: 75px;
+//     border-bottom: 1px solid rgb(255, 130, 92);
+//     color: rgb(255, 130, 92);
+//   }
+// `;
 
 export const Parass = styled(Para)`
-   color: var(--black-3);
-  padding: 5px;
+  color: var(--black-3);
+  padding: 5px;  
   font-size: 18px;
   cursor: pointer;
-  // border-bottom: 2px solid transparent;
-  // transition: border-bottom 0.3s ease-in-out;
+  line-height: 1.2; 
 
   &:hover {
-  width: 75px;
-    border-bottom: 1px solid black;
+    width: 75px;
+    border-bottom: 1px solid rgb(255, 130, 92);
+    color: rgb(255, 130, 92);
+    padding-bottom: 1px;  
+    margin-bottom: 2px; 
   }
 `;
 
+
+
 export const Para1 = styled(Para)`
+
     justify-content: center;
     text-align: center;
     padding-left: 170px;
     margin-top: 20px;
+ 
     @media screen and (max-width: 768px){
     padding-left: 30px;
     }

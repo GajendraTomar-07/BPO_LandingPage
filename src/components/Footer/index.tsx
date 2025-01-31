@@ -48,13 +48,13 @@ const Footer = ({ t }: { t: TFunction }) => {
 </Paras>
 <Paras
   onClick={() => {
-    const element = document.getElementById("about");
+    const element = document.getElementById("vision");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   }}
 >
-  {t("vision")}
+  {t("Vision")}
 </Paras>
 <Paras
   onClick={() => {
@@ -64,7 +64,7 @@ const Footer = ({ t }: { t: TFunction }) => {
     }
   }}
 >
-  {t("mission")}
+  {t("Mission")}
 </Paras>
 <Paras
   onClick={() => {
@@ -74,7 +74,7 @@ const Footer = ({ t }: { t: TFunction }) => {
     }
   }}
 >
-  {t("services")}
+  {t("Services")}
 </Paras>
  
 
@@ -95,7 +95,7 @@ const Footer = ({ t }: { t: TFunction }) => {
             <Para style={{ color: "var(--black-3)", padding: "5px",fontSize:"18px" }}>
               716, Shekhar Central, Palasia Square, Indore (M.P.)
             </Para>
-            <Para style={{ color: "var(--black-3)", padding: "5px",fontSize:"18px" }}>+91-999-36-24-205</Para>
+            <Para style={{ color: "var(--black-3)", padding: "5px",fontSize:"18px" }}>+91-9993624205</Para>
             <Para style={{ color: "var(--black-3)", padding: "5px",fontSize:"18px" }}>partner@gorack.in</Para>
           </Col>
         </Row>

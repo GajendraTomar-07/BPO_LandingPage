@@ -37,7 +37,7 @@ const Home = () => {
         title={AboutContent.title}
         content={AboutContent.text}
         icon="graphs.svg"
-        id="about"
+        id="vision"
       />
       <ContentBlock
         direction="right"
