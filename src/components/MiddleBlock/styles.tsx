@@ -14,6 +14,8 @@ export const MiddleBlockSection = styled("section")`
 
 export const Content = styled("p")`
   padding: 0.75rem 0 0.75rem;
+justify-content: center;   
+text-align: center;
 `;
 
 export const ContentWrapper = styled("div")`

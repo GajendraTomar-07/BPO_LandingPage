@@ -89,7 +89,7 @@ export const MinTitle = styled.h3`
 `;
 
 export const MinPara = styled.p`
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: center;
   color: #595959;
 `;
@@ -98,7 +98,7 @@ export const MinPara = styled.p`
 export const Contents = styled(Content)`
 word-wrap: break-word;
 width: 560px;
-text-align: left;
+ justify-content: center;
 line-height: 1.5;
 @media only screen and (max-width: 1024px){
 width: auto;

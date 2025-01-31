@@ -196,3 +196,15 @@ export const Parass = styled(Para)`
     border-bottom: 1px solid black;
   }
 `;
+
+export const Para1 = styled(Para)`
+    justify-content: center;
+    text-align: center;
+    padding-left: 170px;
+    margin-top: 20px;
+    @media screen and (max-width: 768px){
+    padding-left: 30px;
+    }
+`
+
+

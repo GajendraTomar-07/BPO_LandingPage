@@ -37,13 +37,15 @@ export const ButtonContainer = styled("div")`
 `;
 
 export const Slides = styled(Slide)`
-margin-top: -100px;
+margin-top: -70px;
 word-wrap: break-word;
 width: 500px;
-text-align: left;
+justify-content: center;
+
 line-height: 1.5;
 @media only screen and (max-width: 1024px){
 margin-top: 10px;
 width: auto;
+
 } 
 `

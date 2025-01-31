@@ -3,7 +3,7 @@ import { withTranslation, TFunction } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
 
-import { FooterSection, Title, Para, Paras, Parass } from "./styles";
+import { FooterSection, Title, Para, Paras, Parass, Para1 } from "./styles";
 
 const Footer = ({ t }: { t: TFunction }) => {
   return (
@@ -46,6 +46,36 @@ const Footer = ({ t }: { t: TFunction }) => {
 >
   {t("About")}
 </Paras>
+<Paras
+  onClick={() => {
+    const element = document.getElementById("about");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+>
+  {t("vision")}
+</Paras>
+<Paras
+  onClick={() => {
+    const element = document.getElementById("mission");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+>
+  {t("mission")}
+</Paras>
+<Paras
+  onClick={() => {
+    const element = document.getElementById("our-services");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+>
+  {t("services")}
+</Paras>
  
 
             <Parass  
@@ -70,12 +100,11 @@ const Footer = ({ t }: { t: TFunction }) => {
           </Col>
         </Row>
 
-        {/* Copyright Section */}
-        <Row  style={{ marginTop: "15px",justifyContent:'center', textAlign: "center" }}>
+        <Row  >
           <Col xs={24}>
-            <Para style={{ color: "var(--black-3)", fontSize: "20px", fontWeight: "bold" }}>
+            <Para1 style={{ color: "var(--black-3)", fontSize: "20px", fontWeight: "bold"}}>
               © 2025 | All rights reserved by SriGoRack
-            </Para>
+            </Para1>
           </Col>
         </Row>
       </Container>
